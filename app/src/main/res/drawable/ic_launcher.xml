@@ -1,16 +1,37 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
     
-    <!-- 极客深灰底色 -->
-    <path 
-        android:fillColor="#263238" 
-        android:pathData="M24,14 h60 c5.5,0 10,4.5 10,10 v60 c0,5.5 -4.5,10 -10,10 h-60 c-5.5,0 -10,-4.5 -10,-10 v-60 c0,-5.5 4.5,-10 10,-10 z" />
+    <!-- 高级陶瓷白底色 (带微弱的银色过渡，增加立体感) -->
+    <path android:pathData="M24,14 h60 c5.5,0 10,4.5 10,10 v60 c0,5.5 -4.5,10 -10,10 h-60 c-5.5,0 -10,-4.5 -10,-10 v-60 c0,-5.5 4.5,-10 10,-10 z">
+        <aapt:attr name="android:fillColor">
+            <gradient 
+                android:startX="0" android:startY="0" 
+                android:endX="108" android:endY="108" 
+                android:type="linear">
+                <item android:offset="0.0" android:color="#FFFFFF" />
+                <item android:offset="1.0" android:color="#F0F2F5" />
+            </gradient>
+        </aapt:attr>
+    </path>
         
-    <!-- 亮青色 G 字符 (机械键盘风格) -->
-    <path 
-        android:fillColor="#00E5FF" 
-        android:pathData="M54,34 c-11,0 -20,9 -20,20 c0,11 9,20 20,20 c11,0 18,-7 19,-15 h-16 v-6 h23 v2 c0,13 -10,25 -26,25 c-14.3,0 -26,-11.7 -26,-26 c0,-14.3 11.7,-26 26,-26 c6,0 12,2 17,6 l-5,6 c-3,-3 -7,-4 -12,-4 z" />
+    <!-- 白金/香槟金 质感渐变 G 字符 -->
+    <path android:pathData="M54,34 c-11,0 -20,9 -20,20 c0,11 9,20 20,20 c11,0 18,-7 19,-15 h-16 v-6 h23 v2 c0,13 -10,25 -26,25 c-14.3,0 -26,-11.7 -26,-26 c0,-14.3 11.7,-26 26,-26 c6,0 12,2 17,6 l-5,6 c-3,-3 -7,-4 -12,-4 z">
+        <aapt:attr name="android:fillColor">
+            <gradient 
+                android:startX="30" android:startY="30" 
+                android:endX="80" android:endY="80" 
+                android:type="linear">
+                <!-- 高光区：极亮白金 -->
+                <item android:offset="0.0" android:color="#FFF9E6" />
+                <!-- 核心区：香槟金 -->
+                <item android:offset="0.4" android:color="#D6A848" />
+                <!-- 边缘沉淀：暗金/哑光金属 -->
+                <item android:offset="1.0" android:color="#9B782E" />
+            </gradient>
+        </aapt:attr>
+    </path>
 </vector>
